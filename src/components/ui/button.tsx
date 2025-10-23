@@ -15,9 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        "italian-green": "bg-italian-green text-white hover:bg-italian-green/90 shadow-lg hover:shadow-xl transition-all",
-        "italian-white": "bg-italian-white text-foreground border-2 border-border hover:bg-italian-white/90 shadow-lg hover:shadow-xl transition-all",
-        "italian-red": "bg-italian-red text-white hover:bg-italian-red/90 shadow-lg hover:shadow-xl transition-all",
+        "italian-green": "bg-italian-green text-black hover:bg-italian-green/90 shadow-lg hover:shadow-xl transition-all",
+        "italian-white": "bg-italian-white text-black border-2 border-border hover:bg-italian-white/90 shadow-lg hover:shadow-xl transition-all",
+        "italian-red": "bg-italian-red text-black hover:bg-italian-red/90 shadow-lg hover:shadow-xl transition-all",
       },
       size: {
         default: "h-10 px-4 py-2",
