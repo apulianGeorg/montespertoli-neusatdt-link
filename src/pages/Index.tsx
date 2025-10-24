@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroBackground from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -13,18 +14,25 @@ const Index = () => {
       <main className="container mx-auto px-4">
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 text-center overflow-hidden">
-          {/* Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-italian-green/10 via-transparent to-italian-red/10 pointer-events-none" />
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${heroBackground})` }}
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-italian-green/20 via-transparent to-italian-red/20 pointer-events-none" />
           
           <div className="relative z-10 animate-fade-in">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-foreground tracking-tight">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-white tracking-tight drop-shadow-2xl">
               Freunde von<br />
-              <span className="text-gradient">Montespertoli</span>
+              <span className="text-gradient drop-shadow-lg">Montespertoli</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto mb-6 leading-relaxed drop-shadow-lg">
               Städtepartnerschaft Montespertoli & Neustadt a. d. Aisch
             </p>
-            <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-white/85 max-w-2xl mx-auto drop-shadow-lg">
               Verbunden durch Freundschaft, Kultur und gemeinsame Werte
             </p>
           </div>
