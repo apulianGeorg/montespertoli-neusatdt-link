@@ -22,7 +22,7 @@ const Index = () => {
               <span className="text-gradient">Montespertoli</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
-              Städtepartnerschaft zwischen Montespertoli und Neustadt
+              Städtepartnerschaft Montespertoli & Neustadt a. d. Aisch
             </p>
             <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto">
               Verbunden durch Freundschaft, Kultur und gemeinsame Werte
