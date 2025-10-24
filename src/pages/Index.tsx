@@ -12,68 +12,86 @@ const Index = () => {
       
       <main className="container mx-auto px-4">
         {/* Hero Section */}
-        <section className="py-16 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Freunde von Montespertoli e.V.
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-4">
-            Städtepartnerschaft zwischen Montespertoli und Neustadt
-          </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Verbunden durch Freundschaft, Kultur und gemeinsame Werte
-          </p>
+        <section className="relative py-24 md:py-32 text-center overflow-hidden">
+          {/* Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-italian-green/10 via-transparent to-italian-red/10 pointer-events-none" />
+          
+          <div className="relative z-10 animate-fade-in">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-foreground tracking-tight">
+              Freunde von<br />
+              <span className="text-gradient">Montespertoli</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed">
+              Städtepartnerschaft zwischen Montespertoli und Neustadt
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground/80 max-w-2xl mx-auto">
+              Verbunden durch Freundschaft, Kultur und gemeinsame Werte
+            </p>
+          </div>
         </section>
         
         {/* Main Action Buttons */}
-        <section className="py-12 max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6">
-            <Button 
-              variant="italian-green" 
-              size="xl"
-              onClick={() => navigate("/beitritt")}
-              className="w-full flex flex-col items-center justify-center gap-3"
-            >
-              <span>Beitritt</span>
-              <ArrowRight className="h-6 w-6" />
-            </Button>
+        <section className="py-16 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <Button 
+                variant="italian-green" 
+                size="xl"
+                onClick={() => navigate("/beitritt")}
+                className="w-full h-40 flex flex-col items-center justify-center gap-4 text-xl font-semibold hover:scale-105 transition-all duration-300 glow-green hover:shadow-2xl"
+              >
+                <span>Beitritt</span>
+                <ArrowRight className="h-8 w-8 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
             
-            <Button 
-              variant="italian-white" 
-              size="xl"
-              onClick={() => navigate("/aktuelles")}
-              className="w-full flex flex-col items-center justify-center gap-3"
-            >
-              <span>Aktuelles</span>
-              <ArrowRight className="h-6 w-6" />
-            </Button>
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Button 
+                variant="italian-white" 
+                size="xl"
+                onClick={() => navigate("/aktuelles")}
+                className="w-full h-40 flex flex-col items-center justify-center gap-4 text-xl font-semibold hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+              >
+                <span>Aktuelles</span>
+                <ArrowRight className="h-8 w-8 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
             
-            <Button 
-              variant="italian-red" 
-              size="xl"
-              onClick={() => navigate("/verein")}
-              className="w-full flex flex-col items-center justify-center gap-3"
-            >
-              <span>Verein</span>
-              <ArrowRight className="h-6 w-6" />
-            </Button>
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <Button 
+                variant="italian-red" 
+                size="xl"
+                onClick={() => navigate("/verein")}
+                className="w-full h-40 flex flex-col items-center justify-center gap-4 text-xl font-semibold hover:scale-105 transition-all duration-300 glow-red hover:shadow-2xl"
+              >
+                <span>Verein</span>
+                <ArrowRight className="h-8 w-8 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </section>
         
         {/* Info Section */}
-        <section className="py-16 max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card p-8 rounded-lg shadow-sm border border-border">
-              <h2 className="text-2xl font-semibold mb-4 text-primary">Unsere Mission</h2>
-              <p className="text-foreground/90 leading-relaxed">
+        <section className="py-20 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="glass-effect p-10 rounded-2xl hover:scale-[1.02] transition-all duration-300 animate-fade-in border-l-4 border-primary" style={{ animationDelay: '0.4s' }}>
+              <h2 className="text-3xl font-bold mb-6 text-primary flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Unsere Mission
+              </h2>
+              <p className="text-foreground/90 leading-relaxed text-lg">
                 Wir fördern die freundschaftlichen Beziehungen zwischen den Bürgern von 
                 Montespertoli und Neustadt durch kulturellen Austausch, gemeinsame Aktivitäten 
                 und persönliche Begegnungen.
               </p>
             </div>
             
-            <div className="bg-card p-8 rounded-lg shadow-sm border border-border">
-              <h2 className="text-2xl font-semibold mb-4 text-accent">Willkommen</h2>
-              <p className="text-foreground/90 leading-relaxed">
+            <div className="glass-effect p-10 rounded-2xl hover:scale-[1.02] transition-all duration-300 animate-fade-in border-l-4 border-accent" style={{ animationDelay: '0.5s' }}>
+              <h2 className="text-3xl font-bold mb-6 text-accent flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                Willkommen
+              </h2>
+              <p className="text-foreground/90 leading-relaxed text-lg">
                 Ob Sie bereits Mitglied sind oder sich für unsere Arbeit interessieren - 
                 wir freuen uns über jeden, der unsere deutsch-italienische Freundschaft 
                 mitgestalten möchte.
@@ -84,9 +102,11 @@ const Index = () => {
       </main>
       
       {/* Footer */}
-      <footer className="border-t bg-muted/30 py-8 mt-16">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2025 Freunde von Montespertoli e.V. - Alle Rechte vorbehalten</p>
+      <footer className="border-t border-border/50 bg-card/50 backdrop-blur-sm py-12 mt-24">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-muted-foreground">
+            © 2025 Freunde von Montespertoli e.V. - Alle Rechte vorbehalten
+          </p>
         </div>
       </footer>
     </div>

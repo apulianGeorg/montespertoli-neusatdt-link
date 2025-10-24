@@ -99,6 +99,13 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Modern design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--italian-green) / 0.1), hsl(var(--italian-red) / 0.1));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--card) / 0.8));
+    --shadow-glow-green: 0 0 40px hsl(var(--italian-green) / 0.3);
+    --shadow-glow-red: 0 0 40px hsl(var(--italian-red) / 0.3);
+    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
   }
 }
 
@@ -109,5 +116,28 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glow-green {
+    box-shadow: var(--shadow-glow-green);
+  }
+  
+  .glow-red {
+    box-shadow: var(--shadow-glow-red);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--italian-green)), hsl(var(--italian-red)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
