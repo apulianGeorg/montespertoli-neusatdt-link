@@ -37,39 +37,8 @@ const Header = () => {
             />
           </Link>
           
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`relative text-base font-medium transition-all duration-300 hover:text-primary group ${
-                  isActive(link.path)
-                    ? "text-primary"
-                    : "text-foreground/80"
-                }`}
-              >
-                {link.label}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
-                  isActive(link.path) ? "w-full" : "w-0 group-hover:w-full"
-                }`} />
-              </Link>
-            ))}
-            
-            {/* Instagram Link */}
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-foreground/80 hover:text-primary transition-all duration-300 hover:scale-110"
-              aria-label="Instagram"
-            >
-              <Instagram className="h-6 w-6" />
-            </a>
-          </nav>
-          
-          {/* Mobile Menu */}
-          <div className="md:hidden flex items-center gap-4">
+          {/* Hamburger Menu for all screen sizes */}
+          <div className="flex items-center gap-4">
             <a
               href="https://www.instagram.com"
               target="_blank"
@@ -82,7 +51,7 @@ const Header = () => {
             
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Menü öffnen</span>
                 </Button>
