@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Instagram, Menu, X } from "lucide-react";
+import { Instagram, Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,19 +9,21 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
   
   const isActive = (path: string) => location.pathname === path;
   
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/verein", label: "Verein" },
-    { path: "/aktuelles", label: "Aktuelles" },
-    { path: "/beitritt", label: "Beitritt" },
+    { path: "/", label: t("Home", "Home") },
+    { path: "/verein", label: t("Verein", "Associazione") },
+    { path: "/aktuelles", label: t("Aktuelles", "Notizie") },
+    { path: "/beitritt", label: t("Beitritt", "Adesione") },
   ];
   
   return (
@@ -37,8 +39,32 @@ const Header = () => {
             />
           </Link>
           
-          {/* Hamburger Menu for all screen sizes */}
+          {/* Language & Menu */}
           <div className="flex items-center gap-4">
+            {/* Language Switcher */}
+            <div className="flex items-center gap-2 bg-muted/50 rounded-full p-1">
+              <button
+                onClick={() => setLanguage("de")}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                  language === "de"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/60 hover:text-foreground"
+                }`}
+              >
+                DE
+              </button>
+              <button
+                onClick={() => setLanguage("it")}
+                className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+                  language === "it"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/60 hover:text-foreground"
+                }`}
+              >
+                IT
+              </button>
+            </div>
+            
             <a
               href="https://www.instagram.com"
               target="_blank"
@@ -58,7 +84,7 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <SheetHeader>
-                  <SheetTitle>Navigation</SheetTitle>
+                  <SheetTitle>{t("Navigation", "Navigazione")}</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-6 mt-8">
                   {navLinks.map((link) => (
