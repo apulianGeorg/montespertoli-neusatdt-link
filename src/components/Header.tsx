@@ -26,6 +26,14 @@ const Header = () => {
     { path: "/beitritt", label: t("Beitritt", "Adesione") },
   ];
   
+  const vereinSubLinks = [
+    { path: "/montespertoli", label: "Montespertoli" },
+    { path: "/neustadt", label: "Neustadt a.d. Aisch" },
+    { path: "/aktivitaeten", label: t("Aktivitäten", "Attività") },
+    { path: "/historie", label: t("Historie", "Storia") },
+    { path: "/sponsoren", label: t("Sponsoren", "Sponsor") },
+  ];
+  
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
@@ -88,18 +96,39 @@ const Header = () => {
                 </SheetHeader>
                 <nav className="flex flex-col gap-6 mt-8">
                   {navLinks.map((link) => (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium transition-colors hover:text-primary py-2 ${
-                        isActive(link.path)
-                          ? "text-primary border-l-4 border-primary pl-4"
-                          : "text-foreground/80 pl-4"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
+                    <div key={link.path}>
+                      <Link
+                        to={link.path}
+                        onClick={() => link.path !== "/verein" && setIsOpen(false)}
+                        className={`text-lg font-medium transition-colors hover:text-primary py-2 block ${
+                          isActive(link.path)
+                            ? "text-primary border-l-4 border-primary pl-4"
+                            : "text-foreground/80 pl-4"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                      
+                      {/* Untermenü für Verein */}
+                      {link.path === "/verein" && (
+                        <div className="ml-8 mt-3 space-y-3 border-l-2 border-border/50 pl-4">
+                          {vereinSubLinks.map((subLink) => (
+                            <Link
+                              key={subLink.path}
+                              to={subLink.path}
+                              onClick={() => setIsOpen(false)}
+                              className={`text-base transition-colors hover:text-primary block ${
+                                isActive(subLink.path)
+                                  ? "text-primary font-medium"
+                                  : "text-foreground/60"
+                              }`}
+                            >
+                              {subLink.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </nav>
               </SheetContent>
