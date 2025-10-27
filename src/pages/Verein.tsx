@@ -44,23 +44,38 @@ const Verein = () => {
 
   const boardMembers = [
     { 
-      position: t("1. Vorsitzende/r", "1° Presidente"), 
-      name: "[Name]", 
+      position: t("1. Vorsitzender", "1° Presidente"), 
+      name: "Klaus Meier", 
       email: "vorsitz@montespertoli-freunde.de" 
     },
     { 
-      position: t("2. Vorsitzende/r", "2° Presidente"), 
-      name: "[Name]", 
+      position: t("2. Vorsitzender", "2° Presidente"), 
+      name: "Klaus Wölfing", 
       email: "vorsitz@montespertoli-freunde.de" 
     },
     { 
-      position: t("Kassenwart", "Tesoriere"), 
-      name: "[Name]", 
+      position: t("Kassierer", "Tesoriere"), 
+      name: "Hans-Joachim Gleißner", 
       email: "kasse@montespertoli-freunde.de" 
     },
     { 
-      position: t("Schriftführer/in", "Segretario/a"), 
-      name: "[Name]", 
+      position: t("Schriftführerin", "Segretaria"), 
+      name: "Ursula Duell", 
+      email: "info@montespertoli-freunde.de" 
+    },
+    { 
+      position: t("1. Beisitzer", "1° Consigliere"), 
+      name: "Peter Fischer", 
+      email: "info@montespertoli-freunde.de" 
+    },
+    { 
+      position: t("2. Beisitzer", "2° Consigliere"), 
+      name: "Jane Blümlein", 
+      email: "info@montespertoli-freunde.de" 
+    },
+    { 
+      position: t("3. Beisitzer", "3° Consigliere"), 
+      name: "Reinhold Stieglitz", 
       email: "info@montespertoli-freunde.de" 
     }
   ];
