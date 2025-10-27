@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Heart, Globe, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import vorstandImage from "@/assets/vorstand_2025.jpg";
 
 const Verein = () => {
   const { t } = useLanguage();
@@ -195,6 +196,16 @@ const Verein = () => {
               <h2 className="text-3xl font-semibold mb-8 text-center">
                 {t("Unser Vorstand", "Il Nostro Consiglio")}
               </h2>
+              
+              {/* Vorstandsfoto */}
+              <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src={vorstandImage} 
+                  alt={t("Vorstand 2025", "Consiglio 2025")}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
               <div className="grid md:grid-cols-2 gap-6">
                 {boardMembers.map((member, index) => (
                   <Card key={index} className="hover:shadow-md transition-shadow">
