@@ -267,14 +267,16 @@ const Beitritt = () => {
               </div>
 
               <div className="text-center mt-8">
-                <Button size="lg" className="gap-2">
-                  <Download className="h-5 w-5" />
-                  {t("Beitrittsformular herunterladen", "Scaricare Modulo di Adesione")}
-                </Button>
+                <a href="/documents/Monte_Beitritt.pdf" download>
+                  <Button size="lg" className="gap-2">
+                    <Download className="h-5 w-5" />
+                    {t("Beitrittsformular herunterladen", "Scaricare Modulo di Adesione")}
+                  </Button>
+                </a>
                 <p className="text-sm text-muted-foreground mt-3">
                   {t(
-                    "Das Formular wird in Kürze zum Download bereitgestellt",
-                    "Il modulo sarà presto disponibile per il download"
+                    "PDF-Formular zum Ausdrucken und Ausfüllen",
+                    "Modulo PDF da stampare e compilare"
                   )}
                 </p>
               </div>

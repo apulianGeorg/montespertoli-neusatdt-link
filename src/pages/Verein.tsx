@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Heart, Globe, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Users, Heart, Globe, GraduationCap, Download } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import vorstandImage from "@/assets/vorstand_2025.jpg";
 
@@ -235,6 +236,28 @@ const Verein = () => {
                     </CardHeader>
                   </Card>
                 ))}
+              </div>
+            </section>
+
+            {/* Satzung */}
+            <section className="bg-card p-8 rounded-lg shadow-sm border border-border/50">
+              <h2 className="text-3xl font-semibold mb-6 flex items-center gap-3">
+                <span className="h-1 w-12 bg-primary rounded"></span>
+                {t("Vereinssatzung", "Statuto dell'Associazione")}
+              </h2>
+              <p className="text-foreground/90 leading-relaxed mb-6">
+                {t(
+                  "Unsere Vereinssatzung regelt die Grundlagen, Ziele und Organisation unseres Vereins. Sie bildet die rechtliche Basis für unsere Arbeit und das gemeinsame Miteinander.",
+                  "Il nostro statuto regola le basi, gli obiettivi e l'organizzazione della nostra associazione. Costituisce la base legale per il nostro lavoro e la convivenza comune."
+                )}
+              </p>
+              <div className="text-center">
+                <a href="/documents/Monte_Satzung.pdf" download>
+                  <Button size="lg" className="gap-2">
+                    <Download className="h-5 w-5" />
+                    {t("Satzung herunterladen (PDF)", "Scaricare Statuto (PDF)")}
+                  </Button>
+                </a>
               </div>
             </section>
 
