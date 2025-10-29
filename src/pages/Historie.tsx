@@ -8,99 +8,99 @@ const Historie = () => {
   
   const timeline = [
     {
-      year: "1990er Jahre",
-      yearIt: "Anni '90",
-      title: t("Die Anfänge", "Gli Inizi"),
+      year: "1982",
+      yearIt: "1982",
+      title: t("Erster Besuch in Montespertoli", "Prima Visita a Montespertoli"),
       description: t(
-        "Die Idee einer Städtepartnerschaft zwischen Neustadt a.d. Aisch und Montespertoli entsteht. Erste Kontakte werden geknüpft und Delegationen besuchen sich gegenseitig.",
-        "Nasce l'idea di un gemellaggio tra Neustadt a.d. Aisch e Montespertoli. Vengono stabiliti i primi contatti e le delegazioni si visitano reciprocamente."
+        "Erster Besuch des Ehepaares Förster in Montespertoli anlässlich einer VHS-Reise. Kennenlernen von Antonella Chiavacci, später Vorsitzende der 'Amici di Neustadt' und Bürgermeisterin von Montespertoli. Bilaterale Besuche auf privater Ebene in den Nachfolgejahren generierten und vertieften das beiderseitige Interesse, eine partnerschaftliche Verbindung einzugehen.",
+        "Prima visita della coppia Förster a Montespertoli in occasione di un viaggio VHS. Conoscenza di Antonella Chiavacci, successivamente presidente degli 'Amici di Neustadt' e sindaco di Montespertoli. Le visite bilaterali a livello privato negli anni successivi generarono e approfondirono l'interesse reciproco a stabilire un legame di partnership."
       )
     },
     {
-      year: "2000",
-      yearIt: "2000",
-      title: t("Offizielle Partnerschaft", "Partnership Ufficiale"),
-      description: t(
-        "Die Städtepartnerschaft wird offiziell besiegelt. Ein historischer Moment für beide Städte und der Beginn einer wunderbaren Freundschaft.",
-        "Il gemellaggio viene ufficialmente sigillato. Un momento storico per entrambe le città e l'inizio di una meravigliosa amicizia."
-      )
-    },
-    {
-      year: "2005",
-      yearIt: "2005",
+      year: "1991",
+      yearIt: "1991",
       title: t("Gründung des Vereins", "Fondazione dell'Associazione"),
       description: t(
-        "Der Verein 'Freunde von Montespertoli e.V.' wird gegründet, um die Partnerschaft aktiv zu gestalten und mit Leben zu füllen.",
-        "Viene fondata l'associazione 'Amici di Montespertoli e.V.' per dare forma attiva alla partnership e riempirla di vita."
+        "Die Bürgermeisterwechsel in beiden Städten begünstigten die Entwicklung einer Städtepartnerschaft, da eine verstärkte Förderung des Partnerschaftsgedankens spürbar wurde. Beginn von offiziellen Besuchen von Bürgern und Bürgermeistern beider Partnerstädte. Offizielle Vereinsgründung der 'Freunde von Montespertoli' durch Willi Förster und 63 seiner Freunde am 11. Oktober 1991.",
+        "I cambi di sindaco in entrambe le città favorirono lo sviluppo di un gemellaggio, poiché si avvertì un maggiore sostegno all'idea di partnership. Inizio delle visite ufficiali di cittadini e sindaci di entrambe le città gemellate. Fondazione ufficiale dell'associazione 'Amici di Montespertoli' da parte di Willi Förster e 63 dei suoi amici l'11 ottobre 1991."
       )
     },
     {
-      year: "2008",
-      yearIt: "2008",
-      title: t("Erster Schüleraustausch", "Primo Scambio Studentesco"),
+      year: "1992",
+      yearIt: "1992",
+      title: t("Offizielle Anerkennung der Städtepartnerschaft", "Riconoscimento Ufficiale del Gemellaggio"),
       description: t(
-        "Start des regelmäßigen Schüleraustauschs zwischen den Schulen beider Städte. Junge Menschen bauen Brücken zwischen den Kulturen.",
-        "Inizio dello scambio studentesco regolare tra le scuole di entrambe le città. I giovani costruiscono ponti tra le culture."
+        "Offizielle Anerkennung der Städtepartnerschaft durch den Neustädter Stadtrat, ebenso in Montespertoli. Unterzeichnung der Partnerschaftsurkunden bei Feierlichkeiten in Neustadt und Montespertoli.",
+        "Riconoscimento ufficiale del gemellaggio da parte del consiglio comunale di Neustadt, così come a Montespertoli. Firma dei documenti di gemellaggio durante le celebrazioni a Neustadt e Montespertoli."
       )
     },
     {
-      year: "2010",
-      yearIt: "2010",
-      title: t("10 Jahre Partnerschaft", "10 Anni di Gemellaggio"),
+      year: "2011",
+      yearIt: "2011",
+      title: t("20 Jahre Verein", "20 Anni dell'Associazione"),
       description: t(
-        "Große Jubiläumsfeier in beiden Städten. Hunderte Freunde kommen zusammen, um ein Jahrzehnt gelebter Freundschaft zu feiern.",
-        "Grande celebrazione del giubileo in entrambe le città. Centinaia di amici si riuniscono per celebrare un decennio di amicizia vissuta."
+        "Feier zum 20-jährigen Bestehen des Vereins 'Freunde von Montespertoli e.V.'",
+        "Celebrazione del 20° anniversario dell'associazione 'Amici di Montespertoli e.V.'"
       )
     },
     {
-      year: "2015",
-      yearIt: "2015",
-      title: t("Kulturprojekte", "Progetti Culturali"),
+      year: "2012",
+      yearIt: "2012",
+      title: t("20 Jahre Städtepartnerschaft", "20 Anni di Gemellaggio"),
       description: t(
-        "Ausbau der kulturellen Zusammenarbeit mit gemeinsamen Ausstellungen, Konzerten und Kunstprojekten. Die Partnerschaft wird vielfältiger.",
-        "Espansione della collaborazione culturale con mostre comuni, concerti e progetti artistici. La partnership diventa più diversificata."
+        "Die Partnerschaft begeht das 20-jährige Jubiläum mit Feiern in Neustadt und Montespertoli.",
+        "La partnership celebra il 20° anniversario con festeggiamenti a Neustadt e Montespertoli."
       )
     },
     {
-      year: "2020",
-      yearIt: "2020",
-      title: t("20 Jahre Freundschaft", "20 Anni di Amicizia"),
+      year: "2016",
+      yearIt: "2016",
+      title: t("25 Jahre Verein", "25 Anni dell'Associazione"),
       description: t(
-        "Trotz Pandemie-Herausforderungen hält die Freundschaft. Virtuelle Treffen und kreative Wege der Begegnung entstehen.",
-        "Nonostante le sfide della pandemia, l'amicizia rimane salda. Nascono incontri virtuali e modi creativi di incontro."
+        "Der Verein Freunde von Montespertoli wird am 11.10.2016 25 Jahre.",
+        "L'associazione Amici di Montespertoli compie 25 anni l'11.10.2016."
       )
     },
     {
-      year: t("Heute", "Oggi"),
-      yearIt: "Oggi",
-      title: t("Eine lebendige Partnerschaft", "Una Partnership Vivace"),
+      year: "2017",
+      yearIt: "2017",
+      title: t("25 Jahre Städtepartnerschaft", "25 Anni di Gemellaggio"),
       description: t(
-        "Die Partnerschaft ist lebendiger denn je. Hunderte persönliche Freundschaften, regelmäßige Fahrten und vielfältige Aktivitäten prägen das Vereinsleben.",
-        "La partnership è più vivace che mai. Centinaia di amicizie personali, viaggi regolari e attività diverse caratterizzano la vita dell'associazione."
+        "Feiern der 25-jährigen Partnerschaft zwischen Neustadt und Montespertoli.",
+        "Celebrazioni dei 25 anni di partnership tra Neustadt e Montespertoli."
+      )
+    },
+    {
+      year: "2022",
+      yearIt: "2022",
+      title: t("30 Jahre Städtepartnerschaft", "30 Anni di Gemellaggio"),
+      description: t(
+        "Feiern der 30-jährigen Partnerschaft Neustadt und Montespertoli.",
+        "Celebrazioni dei 30 anni di partnership tra Neustadt e Montespertoli."
       )
     }
   ];
 
   const milestones = [
     {
-      icon: Users,
-      number: "500+",
-      label: t("Mitglieder und Freunde", "Membri e Amici")
-    },
-    {
       icon: Calendar,
-      number: "50+",
-      label: t("Gemeinsame Fahrten", "Viaggi Comuni")
-    },
-    {
-      icon: Heart,
-      number: "1000+",
-      label: t("Persönliche Freundschaften", "Amicizie Personali")
+      number: "1991",
+      label: t("Vereinsgründung", "Fondazione dell'Associazione")
     },
     {
       icon: Award,
-      number: "20+",
-      label: t("Jahre Partnerschaft", "Anni di Partnership")
+      number: "1992",
+      label: t("Offizielle Partnerschaft", "Partnership Ufficiale")
+    },
+    {
+      icon: Users,
+      number: "33+",
+      label: t("Jahre Verein", "Anni dell'Associazione")
+    },
+    {
+      icon: Heart,
+      number: "32+",
+      label: t("Jahre Städtepartnerschaft", "Anni di Gemellaggio")
     }
   ];
 
@@ -115,8 +115,8 @@ const Historie = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {t(
-                "Eine Zeitreise durch über 20 Jahre deutsch-italienische Freundschaft",
-                "Un viaggio nel tempo attraverso oltre 20 anni di amicizia italo-tedesca"
+                "Eine Zeitreise durch über 30 Jahre deutsch-italienische Freundschaft",
+                "Un viaggio nel tempo attraverso oltre 30 anni di amicizia italo-tedesca"
               )}
             </p>
           </div>
