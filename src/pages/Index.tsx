@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -119,17 +120,7 @@ const Index = () => {
         </section>
       </main>
       
-      {/* Footer */}
-      <footer className="border-t border-border/50 bg-card/50 backdrop-blur-sm py-12 mt-24">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            {t(
-              "© 2025 Freunde von Montespertoli e.V. - Alle Rechte vorbehalten",
-              "© 2025 Amici di Montespertoli e.V. - Tutti i diritti riservati"
-            )}
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
