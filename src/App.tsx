@@ -13,6 +13,7 @@ import Neustadt from "./pages/Neustadt";
 import Aktivitaeten from "./pages/Aktivitaeten";
 import Historie from "./pages/Historie";
 import Sponsoren from "./pages/Sponsoren";
+import Impressum from "./pages/Impressum";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/sponsoren" element={<Sponsoren />} />
             <Route path="/aktuelles" element={<Aktuelles />} />
             <Route path="/beitritt" element={<Beitritt />} />
+            <Route path="/impressum" element={<Impressum />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
