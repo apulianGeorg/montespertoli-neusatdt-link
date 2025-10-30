@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { CookieConsentProvider } from "@/hooks/useCookieConsent";
+import CookieBanner from "@/components/CookieBanner";
 import Index from "./pages/Index";
 import Verein from "./pages/Verein";
 import Aktuelles from "./pages/Aktuelles";
@@ -21,10 +23,12 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <LanguageProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+      <CookieConsentProvider>
+        <LanguageProvider>
+          <Toaster />
+          <Sonner />
+          <CookieBanner />
+          <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/verein" element={<Verein />} />
@@ -40,7 +44,8 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-      </LanguageProvider>
+        </LanguageProvider>
+      </CookieConsentProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
